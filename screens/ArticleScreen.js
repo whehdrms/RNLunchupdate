@@ -53,7 +53,7 @@ class ArticleScreen extends Component {
            <ScrollView>
              <View style={{width: DEVICE_WIDTH, height: DEVICE_WIDTH * 3, justifyContent: 'flex-start'}}>
                <Image style={{width: DEVICE_WIDTH,height: DEVICE_WIDTH * 3, resizeMode: 'cover'}} source={{uri : this.props.navigation.state.params.uri}}/>
-               {/* <Image style={{width: '100%', resizeMode: 'contain'}} source={{uri : "http://lunchlunch-whehdrms.c9users.io/images/ks_card2.png"}}/> */}
+               {/* <Image style={{width: '100%', resizeMode: 'contain'}} source={{uri : "https://www.lunchting.com/images/ks_card2.png"}}/> */}
 
              </View>
            </ScrollView>
