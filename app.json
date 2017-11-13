@@ -22,13 +22,13 @@
     },
     "ios": {
       "bundleIdentifier": "com.lunchting.lunchting",
-      "buildNumber": "2",
+      "buildNumber": "5",
       "icon": "./assets/icons/lunchting_ios.png",
-      "supportsTablet": false
+      "supportsTablet": true
     },
     "android": {
       "package": "com.lunchting.lunchting",
-      "versionCode": 3,
+      "versionCode": 6,
       "icon": "./assets/icons/lunchting_android.png",
       "config": {
         "googleMaps": {
