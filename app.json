@@ -21,14 +21,14 @@
       "assetExts": ["ttf", "mp4"]
     },
     "ios": {
-      "bundleIdentifier": "com.heeham.lunchting",
-      "buildNumber": "2",
+      "bundleIdentifier": "com.lunchting.lunchting",
+      "buildNumber": "5",
       "icon": "./assets/icons/lunchting_ios.png",
-      "supportsTablet": false
+      "supportsTablet": true
     },
     "android": {
-      "package": "com.heeham.lunchting",
-      "versionCode": 2,
+      "package": "com.lunchting.lunchting",
+      "versionCode": 6,
       "icon": "./assets/icons/lunchting_android.png",
       "config": {
         "googleMaps": {
