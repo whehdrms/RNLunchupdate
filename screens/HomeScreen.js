@@ -617,17 +617,19 @@ class HomeScreen extends Component {
           bounces={false}
           stickyHeaderIndices={[1]}
         >
+      
           <View style={{width: "100%", height: 230, justifyContent: 'center', alignItems: 'center'}}>
-            <Video
-              source={{ uri: 'https://www.lunchting.com/videos/main.mp4' }}
-              rate={1.0}
-              volume={0.0}
-              muted={true}
-              resizeMode="cover"
-              shouldPlay
-              isLooping
-              style={{ width: "100%", height: "100%" }}
-            />
+              <Video
+                source={{ uri: 'https://www.lunchting.com/videos/main.mp4' }}
+                rate={1.0}
+                volume={0.0}
+                muted={true}
+                resizeMode="cover"
+                shouldPlay
+                isLooping
+                style={{ width: "100%", height: "100%" }}
+              />
+
             <View style={{width: DEVICE_WIDTH, height: 230, position: 'absolute', left:0, top:0, opacity: 0.6}}>
               <Image style={{width: '100%', height: '100%'}} source={Gradient} />
             </View>
@@ -635,18 +637,22 @@ class HomeScreen extends Component {
               <Image style={{width: '100%', height: '100%', resizeMode: 'cover'}} source={DotFilter} />
             </View>
 
-            <View style={{width: DEVICE_WIDTH, height: 230, position: 'absolute', left:0, top: 0, backgroundColor: "rgba(0,0,0,0)", justifyContent: 'center', flexDirection: 'row'}}>
+            <View style={{width: DEVICE_WIDTH, height: 230, position: 'absolute', left:0, top:0, justifyContent:'center', alignItems:'center', backgroundColor: "rgba(0,0,0,0)", flexDirection: 'row', flex: 1}}>
+
+
               <View style={{width: 130, height: 230, alignItems: 'center', justifyContent: 'center'}}>
                 <Animated.View style={{width: "100%", height: this.logoMargin}}></Animated.View>
                 <Image style={{width: 100, height: 100}} source={Logo} />
               </View>
-              <View style={{width: DEVICE_WIDTH-130, height: 230, justifyContent: 'center', paddingTop: 10}}>
-                <View style={{width: '100%', height: 54, borderLeftWidth: 3, borderColor: '#fc5a5a', justifyContent: 'space-around', paddingLeft: 4}}>
+
+              <View style={{ height: 230, justifyContent: 'center', paddingTop: 10}}>
+                <View style={{width: '100%', height: 54, borderLeftWidth: 3, borderColor: '#fc5a5a', flexDirection:'column', justifyContent: 'space-around', paddingLeft: 4}}>
                   <Text style={{color: 'white', fontSize: 12, fontWeight: '400'}}>삭막한 직장생활</Text>
                   <Text style={{color: 'white', fontSize: 12, fontWeight: '400'}}>새로운 사람을 만나고 싶으신가요?</Text>
                   <Text style={{color: 'white', fontSize: 12, fontWeight: '400'}}>단조로운 점심, 설레는 시간으로 바꿔보세요!</Text>
                 </View>
               </View>
+
             </View>
           </View>
           <ScrollView
