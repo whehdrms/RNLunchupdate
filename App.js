@@ -72,7 +72,7 @@ export default class App extends React.Component {
           elevation: 0,
           shadowOpacity: 0,
           shadowOffset: {
-            height: 0,
+          height: 0,
           }
         },
         headerTitleStyle: {
@@ -103,21 +103,13 @@ export default class App extends React.Component {
         // activeBackgroundColor: '#dbdbdb',
         // 탭 폰트 사이즈 조절 가능
         labelStyle: {
-          fontSize: 13,
-          paddingBottom: 5,
-          paddingTop: 0,
-          marginTop: 0
         },
         iconStyle: {
-          paddingBottom: 0,
-          marginBottom: 0
         },
         // 아이콘만 보이고 싶다면 레이블 끄기
         // showLabel: false,
         style: {
           // 탭 배경색 + 높이 지정 가능
-          height: 60,
-          paddingTop: 10,
           // backgroundColor: '#f4f4f4',
           backgroundColor: 'white',
           borderTopColor: "white"
