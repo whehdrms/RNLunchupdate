@@ -29,22 +29,22 @@ export default class App extends React.Component {
       console.log("DATA : ", data);
       console.log("ORIGIN : ", origin);
 
-      if (origin === 'received') {
-        Alert.alert(
-          'New Push!',
-          '크크크 ',
-          [{ text : 'OK!'}]
-        );
-      }
+      // if (origin === 'received') {
+      //   Alert.alert(
+      //     'New Push!',
+      //     '크크크 ',
+      //     [{ text : 'OK!'}]
+      //   );
+      // }
 
-      if (origin === 'selected') {
-        console.log("선택됨!!");
-        Alert.alert(
-          'New Push!',
-          data.withSome,
-          [{ text : 'OK!'}]
-        );
-      }
+      // if (origin === 'selected') {
+      //   console.log("선택됨!!");
+      //   Alert.alert(
+      //     'New Push!',
+      //     data.withSome,
+      //     [{ text : 'OK!'}]
+      //   );
+      // }
 
     })
   }

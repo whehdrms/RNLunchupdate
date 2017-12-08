@@ -11,6 +11,8 @@ import * as actions from '../actions';
 import io from 'socket.io-client/dist/socket.io';
 import { Video } from 'expo';
 
+import registerForPushNotifications from '../services/push_notifications';
+
 class HomeScreen extends Component {
   static navigationOptions = ({navigation}) => {
 
@@ -50,6 +52,7 @@ class HomeScreen extends Component {
 
 
   componentDidMount () {
+    registerForPushNotifications().then((token)=>{this.pushToken = token;});
     this.socket = io('https://dongkeun.xyz', { secure: true, rejectUnauthorized: false, jsonp : false });
     this.props.enrollSocket(this.socket);
 
@@ -89,7 +92,7 @@ class HomeScreen extends Component {
       //
       // // chatDays로 월요일-금요일까지 방이름을 담은 오브젝트를 전달하면 된다.
       // this.socket.emit('enterRoom', this.props.user, chatDays);
-      this.socket.emit('enterRoom', this.props.user, this.props.chatDays);
+      this.socket.emit('enterRoom', this.props.user, this.props.chatDays, this.pushToken);
 
     });
 
@@ -617,7 +620,7 @@ class HomeScreen extends Component {
           bounces={false}
           stickyHeaderIndices={[1]}
         >
-      
+
           <View style={{width: "100%", height: 230, justifyContent: 'center', alignItems: 'center'}}>
               <Video
                 source={{ uri: 'https://www.lunchting.com/videos/main.mp4' }}

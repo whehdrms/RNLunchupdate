@@ -5,7 +5,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { FormLabel, FormInput } from 'react-native-elements'
 import moment from 'moment/min/moment-with-locales.min.js';
 moment.locale('ko');
-
+import registerForPushNotifications from '../services/push_notifications';
 // moment().format('ll A hh:mm').slice(12, 20)
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
@@ -59,7 +59,7 @@ class ChatRoomScreen extends Component {
   }
 
   componentDidMount () {
-
+    registerForPushNotifications().then((token)=>{this.pushToken = token;});
   }
 
   componentWillUnmount () {
@@ -123,7 +123,8 @@ class ChatRoomScreen extends Component {
           from: this.props.user,
           to: this.props.navigation.state.params.roomName,
           body: this.state.myText,
-          createdAt: moment().format('ll A hh:mm')
+          createdAt: moment().format('ll A hh:mm'),
+          pushToken: this.pushToken
         }, this.props.messagesMon.length);
         var length = this.props.messagesMon.length;
         this.setState({myText: ''}, ()=>{
@@ -144,7 +145,8 @@ class ChatRoomScreen extends Component {
           from: this.props.user,
           to: this.props.navigation.state.params.roomName,
           body: this.state.myText,
-          createdAt: moment().format('ll A hh:mm')
+          createdAt: moment().format('ll A hh:mm'),
+          pushToken: this.pushToken
         }, this.props.messagesTue.length);
         var length = this.props.messagesTue.length;
         this.setState({myText: ''}, ()=>{
@@ -165,7 +167,8 @@ class ChatRoomScreen extends Component {
           from: this.props.user,
           to: this.props.navigation.state.params.roomName,
           body: this.state.myText,
-          createdAt: moment().format('ll A hh:mm')
+          createdAt: moment().format('ll A hh:mm'),
+          pushToken: this.pushToken
         }, this.props.messagesWed.length);
         var length = this.props.messagesWed.length;
         this.setState({myText: ''}, ()=>{
@@ -186,7 +189,8 @@ class ChatRoomScreen extends Component {
           from: this.props.user,
           to: this.props.navigation.state.params.roomName,
           body: this.state.myText,
-          createdAt: moment().format('ll A hh:mm')
+          createdAt: moment().format('ll A hh:mm'),
+          pushToken: this.pushToken
         }, this.props.messagesThu.length);
         var length = this.props.messagesThu.length;
         this.setState({myText: ''}, ()=>{
@@ -207,7 +211,8 @@ class ChatRoomScreen extends Component {
           from: this.props.user,
           to: this.props.navigation.state.params.roomName,
           body: this.state.myText,
-          createdAt: moment().format('ll A hh:mm')
+          createdAt: moment().format('ll A hh:mm'),
+          pushToken: this.pushToken
         }, this.props.messagesFri.length);
         var length = this.props.messagesFri.length;
         this.setState({myText: ''}, ()=>{

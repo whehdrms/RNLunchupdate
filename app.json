@@ -10,7 +10,7 @@
     "primaryColor": "#fc5a5a",
     "icon": "./assets/icons/app-icon.png",
     "notification": {
-      "icon": "./assets/icons/notification-icon.png",
+      "icon": "./assets/icons/notification-icon.png"
     },
     "loading": {
       "icon": "./assets/icons/loading-icon.png",
@@ -22,13 +22,13 @@
     },
     "ios": {
       "bundleIdentifier": "com.lunchting.lunchting",
-      "buildNumber": "5",
+      "buildNumber": "6",
       "icon": "./assets/icons/lunchting_ios.png",
       "supportsTablet": true
     },
     "android": {
       "package": "com.lunchting.lunchting",
-      "versionCode": 6,
+      "versionCode": 8,
       "icon": "./assets/icons/lunchting_android.png",
       "config": {
         "googleMaps": {
